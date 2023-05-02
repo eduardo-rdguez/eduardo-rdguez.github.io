@@ -1,0 +1,78 @@
+{
+  "name": "eduardo-rdguez.github.io",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/eduardo-rdguez.github.io"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "eduardo-rdguez.github.io:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "eduardo-rdguez.github.io:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "eduardo-rdguez.github.io:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "eduardo-rdguez.github.io:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "eduardo-rdguez.github.io:build:development"
+        },
+        "production": {
+          "buildTarget": "eduardo-rdguez.github.io:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/eduardo-rdguez.github.io"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "coverage/eduardo-rdguez.github.io"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "eduardo-rdguez.github.io:build"
+      }
+    }
+  },
+  "tags": []
+}
