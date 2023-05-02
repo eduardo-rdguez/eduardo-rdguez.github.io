@@ -1,13 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
 import NxWelcome from './nx-welcome';
+import { ChakraProvider } from '@chakra-ui/react';
 
 export function App() {
   return (
-    <div>
+    <ChakraProvider>
       <NxWelcome title="eduardo-rdguez.github.io" />
-    </div>
+    </ChakraProvider>
   );
 }
 
