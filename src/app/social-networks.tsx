@@ -16,28 +16,31 @@ export default function SocialNetworks() {
   return (
     <Box>
       <HStack spacing={6} {...stackProps}>
-        <Link href="https://github.com/eduardo-rdguez">
+        <Link href="https://github.com/eduardo-rdguez" target="_blank">
           <IconButton
             aria-label="github"
             icon={<GithubLineIcon />}
             {...iconButtonProps}
           />
         </Link>
-        <Link href="https://www.linkedin.com/in/eduardo-peralta-rodriguez/">
+        <Link
+          href="https://www.linkedin.com/in/eduardo-peralta-rodriguez/"
+          target="_blank"
+        >
           <IconButton
             aria-label="linkedin"
             icon={<LinkedinLineIcon />}
             {...iconButtonProps}
           />
         </Link>
-        <Link href="mailto:eduardoperaltardgz@gmail.com">
+        <Link href="mailto:eduardoperaltardgz@gmail.com" target="_blank">
           <IconButton
             aria-label="mail"
             icon={<MailLineIcon />}
             {...iconButtonProps}
           />
         </Link>
-        <Link href="https://www.instagram.com/ed.rdguez">
+        <Link href="https://www.instagram.com/ed.rdguez" target="_blank">
           <IconButton
             aria-label="instagram"
             icon={<InstagramLineIcon />}
