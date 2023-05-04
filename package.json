@@ -2,7 +2,10 @@
   "name": "eduardo-rdguez.github.io",
   "version": "0.0.0",
   "license": "MIT",
+  "homepage": "https://eduardo-rdguez.github.io",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"
@@ -14,6 +17,7 @@
     "@emotion/styled": "^11.10.8",
     "@swc/helpers": "~0.5.0",
     "framer-motion": "^10.12.7",
+    "gh-pages": "^5.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.11.0",
