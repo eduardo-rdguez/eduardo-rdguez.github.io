@@ -13,3 +13,25 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1rem;
+  background: #4af626;
+  margin-left: 5px;
+  border-radius: 1px;
+  animation: cursor 1s infinite;
+}
