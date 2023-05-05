@@ -10,6 +10,7 @@ export const theme = extendTheme({
       body: {
         bg: '#18191a',
         color: '#f2f2f2',
+        fontSize: { base: '14px', md: '16px' },
       },
     }),
   },

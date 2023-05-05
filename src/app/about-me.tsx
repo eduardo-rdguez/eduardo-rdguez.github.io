@@ -5,7 +5,7 @@ import SocialNetworks from './social-networks';
 
 export default function AboutMe() {
   return (
-    <Container maxW={{ base: '4xl', md: '4xl', lg: '2xl', xl: '6xl' }}>
+    <Container maxW={{ base: '2xl', lg: '4xl' }}>
       <Header />
       <Summary />
       <VStack {...socialNetworksProps}>

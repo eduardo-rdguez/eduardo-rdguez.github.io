@@ -5,7 +5,7 @@ import Footer from './footer';
 
 export default function Home() {
   return (
-    <Container maxW={{ base: '4xl', md: '6xl' }}>
+    <Container maxW={{ base: '4xl', lg: '6xl' }}>
       <Header />
       <Introduction />
       <Footer />
