@@ -2,7 +2,7 @@
   "name": "eduardo-rdguez.github.io",
   "version": "0.0.0",
   "license": "MIT",
-  "homepage": "https://eduardo-rdguez.github.io",
+  "homepage": "https://eduardo-rdguez.github.io/#",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
