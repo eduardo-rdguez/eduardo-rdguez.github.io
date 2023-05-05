@@ -4,13 +4,11 @@ import {
   HeadingProps,
   Highlight,
   Stack,
-  StackProps,
   Text,
   TextProps,
   VStack,
 } from '@chakra-ui/react';
 import Skills from './skills';
-import SocialNetworks from './social-networks';
 
 import mesh from '../assets/mesh.svg';
 
@@ -36,11 +34,11 @@ export default function Summary() {
                 fontWeight: 'bold',
               }}
             >
-              Hey, I'm Eduardo and I'm a software developer with a
-              background in Back-End. I'm passionate about creating scalable and
-              efficient solutions to technological challenges. I specialize in
-              business application development and love working on complex
-              projects that require ingenious solutions.
+              Hey, I'm Eduardo and I'm a software developer with a background in
+              Back-End. I'm passionate about creating scalable and efficient
+              solutions to technological challenges. I specialize in business
+              application development and love working on complex projects that
+              require ingenious solutions.
             </Highlight>
           </Text>
           <Text {...textProps}>
@@ -52,9 +50,6 @@ export default function Summary() {
         </VStack>
       </Stack>
       <Skills />
-      <VStack {...socialNetworksProps}>
-        <SocialNetworks />
-      </VStack>
       <Box
         bgImage={mesh}
         position="absolute"
@@ -71,16 +66,6 @@ const textProps: TextProps = {
   fontSize: '16px',
   textAlign: 'justify',
   fontWeight: 500,
-};
-
-const socialNetworksProps: StackProps = {
-  display: 'flex',
-  justifyContent: 'center',
-  position: 'fixed',
-  bottom: '0',
-  left: '0',
-  w: 'full',
-  py: { base: 5, md: 8 },
 };
 
 const headingProps: HeadingProps = {
