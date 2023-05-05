@@ -34,7 +34,7 @@ export default function Summary() {
                 fontWeight: 'bold',
               }}
             >
-              Hi, I'm Eduardo and I'm a software developer with a background in
+              Hi, I'm Eduardo and I'm a Software Developer with a background in
               Back-End. I'm passionate about creating scalable and efficient
               solutions to technological challenges. I specialize in business
               application development and love working on complex projects that

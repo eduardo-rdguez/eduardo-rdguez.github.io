@@ -44,6 +44,7 @@ export default function Header() {
           <Menu placement="bottom-end" gutter={2}>
             <MenuButton
               as={IconButton}
+              name="menu"
               icon={<MenuLineIcon />}
               bgColor="transparent"
               pr={0}
