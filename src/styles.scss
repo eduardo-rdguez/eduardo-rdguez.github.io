@@ -5,6 +5,7 @@
   src: url('./assets/fonts/Matter-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   src: url('./assets/fonts/CalSans-SemiBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: fallback;
 }
 
 @keyframes cursor {
