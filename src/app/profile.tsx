@@ -1,8 +1,11 @@
 import {
   GridItem,
+  GridItemProps,
   Heading,
   Image,
+  ImageProps,
   SimpleGrid,
+  SimpleGridProps,
   Stack,
   Text,
   TextProps,
@@ -13,12 +16,7 @@ import SocialNetworks from './social-networks';
 
 export default function Profile() {
   return (
-    <SimpleGrid
-      columns={2}
-      h={{ base: '60vh', md: '70vh' }}
-      alignItems="center"
-      spacing={{ base: 6, md: 0 }}
-    >
+    <SimpleGrid {...profileGridProps}>
       <GridItem colSpan={{ base: 2, md: 1 }}>
         <Stack>
           <VStack spacing={{ base: 2, md: 6 }} alignItems="flex-start">
@@ -28,9 +26,7 @@ export default function Profile() {
             <Heading as="h2" size={{ base: '2xl', md: '4xl' }}>
               Eduardo.
             </Heading>
-            <Heading as="h2" size={{ base: 'lg', md: '2xl' }} color="#ffffffa3">
-              I'm a Software Developer
-            </Heading>
+            <Heading {...titleHeadingProps}>I'm a Software Developer</Heading>
             <Text {...textProps}>
               I tend to make use of emerging technologies to build application
               that looks great, feels fantastic, and functions correctly.
@@ -39,16 +35,11 @@ export default function Profile() {
           </VStack>
         </Stack>
       </GridItem>
-      <GridItem
-        display="flex"
-        justifyContent={{ base: 'center', md: 'flex-end' }}
-        colSpan={{ base: 2, md: 1 }}
-      >
+      <GridItem {...gridImageProps}>
         <Image
-          rounded="full"
           src="https://eduardo-rdguez.s3.amazonaws.com/profile-picture.webp"
           alt="profile-picture"
-          w={{ base: '15rem', md: '20rem', lg: '20em' }}
+          {...imageProps}
         />
       </GridItem>
     </SimpleGrid>
@@ -58,4 +49,28 @@ export default function Profile() {
 const textProps: TextProps = {
   fontWeight: 600,
   textAlign: 'inherit',
+};
+
+const profileGridProps: SimpleGridProps = {
+  columns: 2,
+  h: { base: '60vh', md: '70vh' },
+  alignItems: 'center',
+  spacing: { base: 6, md: 0 },
+};
+
+const titleHeadingProps: TextProps = {
+  as: 'h2',
+  size: { base: 'lg', md: '2xl' },
+  color: '#ffffffa3',
+};
+
+const gridImageProps: GridItemProps = {
+  display: 'flex',
+  justifyContent: { base: 'center', md: 'flex-end' },
+  colSpan: { base: 2, md: 1 },
+};
+
+const imageProps: ImageProps = {
+  rounded: 'full',
+  w: { base: '15rem', md: '20rem', lg: '20em' },
 };

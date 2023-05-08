@@ -1,9 +1,12 @@
 import {
   Box,
+  BoxProps,
   Heading,
   HeadingProps,
   Highlight,
+  HighlightProps,
   Stack,
+  StackProps,
   Text,
   TextProps,
   VStack,
@@ -14,26 +17,12 @@ import mesh from '../assets/mesh.svg';
 
 export default function Summary() {
   return (
-    <Stack
-      justifyContent="center"
-      spacing={{ base: 6, md: 8 }}
-      mt={{ base: 0, md: 4 }}
-    >
+    <Stack {...summaryStackProps}>
       <Stack>
         <VStack spacing={{ base: 4, md: 6 }} alignItems="flex-start">
           <Heading {...headingProps}>About me</Heading>
           <Text {...textProps}>
-            <Highlight
-              query="Hi, I'm Eduardo"
-              styles={{
-                px: 2,
-                py: 1,
-                rounded: 'full',
-                bgColor: 'white',
-                color: 'black',
-                fontWeight: 'bold',
-              }}
-            >
+            <Highlight query="Hi, I'm Eduardo" {...highlightProps}>
               Hi, I'm Eduardo and I'm a Software Developer with a background in
               Back-End. I'm passionate about creating scalable and efficient
               solutions to technological challenges. I specialize in business
@@ -50,22 +39,15 @@ export default function Summary() {
         </VStack>
       </Stack>
       <Skills />
-      <Box
-        bgImage={mesh}
-        position="absolute"
-        w="full"
-        h="full"
-        className="mesh"
-        bottom={0}
-      />
+      <Box bgImage={mesh} {...meshBoxProps} />
     </Stack>
   );
 }
 
-const textProps: TextProps = {
-  fontSize: '16px',
-  textAlign: 'justify',
-  fontWeight: 500,
+const summaryStackProps: StackProps = {
+  justifyContent: 'center',
+  spacing: { base: 6, md: 8 },
+  mt: { base: 0, md: 4 },
 };
 
 const headingProps: HeadingProps = {
@@ -74,4 +56,29 @@ const headingProps: HeadingProps = {
   color: '#ffffffa3',
   rounded: 'xl',
   py: 1,
+};
+
+const textProps: TextProps = {
+  fontSize: '16px',
+  textAlign: 'justify',
+  fontWeight: 500,
+};
+
+const highlightProps: Omit<HighlightProps, 'children' | 'query'> = {
+  styles: {
+    px: 2,
+    py: 1,
+    rounded: 'full',
+    bgColor: 'white',
+    color: 'black',
+    fontWeight: 'bold',
+  },
+};
+
+const meshBoxProps: BoxProps = {
+  position: 'absolute',
+  w: 'full',
+  h: 'full',
+  className: 'mesh',
+  bottom: 0,
 };

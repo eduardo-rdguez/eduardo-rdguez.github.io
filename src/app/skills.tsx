@@ -7,6 +7,7 @@ import {
   ImageProps,
   SimpleGrid,
   Stack,
+  StackProps,
   VStack,
 } from '@chakra-ui/react';
 
@@ -18,7 +19,7 @@ export default function Skills() {
       </HStack>
       <SimpleGrid columns={3} justifyItems="center">
         <GridItem>
-          <VStack mt={5} spacing={2} alignItems="flex-start">
+          <VStack {...badgesStackProps}>
             <Image
               src="https://img.shields.io/badge/Groovy-4298B8.svg?style=flat-square&logo=Apache+Groovy&logoColor=white"
               {...imageBadgesProps}
@@ -57,7 +58,7 @@ export default function Skills() {
           </VStack>
         </GridItem>
         <GridItem>
-          <VStack mt={5} spacing={2} alignItems="flex-start">
+          <VStack {...badgesStackProps}>
             <Image
               src="https://img.shields.io/badge/Spring-%236DB33F.svg?style=flat-square&logo=spring&logoColor=white"
               {...imageBadgesProps}
@@ -81,7 +82,7 @@ export default function Skills() {
           </VStack>
         </GridItem>
         <GridItem>
-          <VStack mt={5} spacing={2} alignItems="flex-start">
+          <VStack {...badgesStackProps}>
             <Image
               src="https://img.shields.io/badge/Git-%23F05033.svg?style=flat-square&logo=git&logoColor=white"
               {...imageBadgesProps}
@@ -125,4 +126,10 @@ const headingProps: HeadingProps = {
   color: '#ffffffa3',
   rounded: 'xl',
   py: 1,
+};
+
+const badgesStackProps: StackProps = {
+  mt: 3,
+  spacing: 2,
+  alignItems: 'flex-start',
 };

@@ -13,6 +13,9 @@ import {
   MenuItem,
   IconButton,
   BoxProps,
+  MenuListProps,
+  MenuButtonProps,
+  MenuItemProps,
 } from '@chakra-ui/react';
 import '../styles.scss';
 
@@ -34,7 +37,7 @@ export default function Header() {
         </Link>
         <Box className="terminal-cursor"></Box>
       </Flex>
-      <Stack {...stackStartedProps}>
+      <Stack {...menuStackProps}>
         <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
           <Link to="/about-me">
             <Box {...menuBoxProps}>About me</Box>
@@ -43,30 +46,13 @@ export default function Header() {
         <HStack display={{ md: 'none' }}>
           <Menu placement="bottom-end" gutter={2}>
             <MenuButton
-              as={IconButton}
               name="menu"
+              as={IconButton}
               icon={<MenuLineIcon />}
-              bgColor="transparent"
-              pr={0}
-              _active={{
-                bgColor: 'transparent',
-              }}
-              _hover={{
-                bgColor: 'transparent',
-              }}
+              {...menuButtonProps}
             ></MenuButton>
-            <MenuList
-              bgColor="transparent"
-              justifyContent="end"
-              p={0}
-              minW="0"
-              w="100px"
-            >
-              <MenuItem
-                bgColor="transparent"
-                color="white"
-                justifyContent="end"
-              >
+            <MenuList {...menuListProps}>
+              <MenuItem {...menuItemProps}>
                 <Link to="/about-me">About me</Link>
               </MenuItem>
             </MenuList>
@@ -97,7 +83,7 @@ const flexLogoProps = {
   alignItems: 'center',
 };
 
-const stackStartedProps: StackProps = {
+const menuStackProps: StackProps = {
   flex: { base: 1, md: 0 },
   justify: 'flex-end',
   direction: 'row',
@@ -112,4 +98,29 @@ const menuBoxProps: BoxProps = {
   _hover: {
     textDecoration: 'none',
   },
+};
+
+const menuButtonProps: MenuButtonProps = {
+  bgColor: 'transparent',
+  pr: 0,
+  _active: {
+    bgColor: 'transparent',
+  },
+  _hover: {
+    bgColor: 'transparent',
+  },
+};
+
+const menuListProps: MenuListProps = {
+  bgColor: 'transparent',
+  justifyContent: 'end',
+  minW: '0',
+  w: '100px',
+  p: 0,
+};
+
+const menuItemProps: MenuItemProps = {
+  bgColor: 'transparent',
+  color: 'white',
+  justifyContent: 'end',
 };

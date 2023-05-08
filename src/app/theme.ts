@@ -2,8 +2,8 @@ import { extendTheme } from '@chakra-ui/react';
 
 export const theme = extendTheme({
   fonts: {
-    body: `Matter, cursive`,
-    heading: `CalSans, cursive`,
+    body: `Matter, sans-serif`,
+    heading: `CalSans, sans-serif`,
   },
   styles: {
     global: () => ({
