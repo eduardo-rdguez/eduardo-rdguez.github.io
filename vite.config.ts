@@ -23,6 +23,23 @@ export default defineConfig({
     }),
   ],
 
+  build: {
+    minify: true,
+    cssMinify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          chakra: [
+            '@chakra-ui/react',
+            '@emotion/react',
+            '@emotion/styled',
+            'framer-motion',
+          ],
+        },
+      },
+    },
+  },
+
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [
