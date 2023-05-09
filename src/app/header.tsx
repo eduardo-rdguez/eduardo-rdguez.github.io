@@ -46,7 +46,9 @@ export default function Header() {
         <HStack display={{ md: 'none' }}>
           <Menu placement="bottom-end" gutter={2}>
             <MenuButton
-              name="menu"
+              id="menu-button"
+              name="menu-button"
+              aria-label="menu-button"
               as={IconButton}
               icon={<MenuLineIcon />}
               {...menuButtonProps}
