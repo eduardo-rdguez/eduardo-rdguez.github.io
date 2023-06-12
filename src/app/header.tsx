@@ -117,7 +117,7 @@ const menuListProps: MenuListProps = {
   bgColor: 'transparent',
   justifyContent: 'end',
   minW: '0',
-  w: '100px',
+  w: 'auto',
   p: 0,
 };
 

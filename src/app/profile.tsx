@@ -3,7 +3,6 @@ import {
   GridItemProps,
   Heading,
   Image,
-  ImageProps,
   SimpleGrid,
   SimpleGridProps,
   Stack,
@@ -19,14 +18,12 @@ export default function Profile() {
     <SimpleGrid {...profileGridProps}>
       <GridItem colSpan={{ base: 2, md: 1 }}>
         <Stack>
-          <VStack spacing={{ base: 2, md: 6 }} alignItems="flex-start">
+          <VStack spacing={{ base: 1, md: 6 }} alignItems="flex-start">
             <Text {...textProps} color="#ffffffa3">
               Hi, my name's
             </Text>
-            <Heading as="h2" size={{ base: '2xl', md: '4xl' }}>
-              Eduardo.
-            </Heading>
-            <Heading {...titleHeadingProps}>I'm a Software Developer</Heading>
+            <Heading {...nameTextProps}>Eduardo.</Heading>
+            <Heading {...positionTextProps}>I'm a Software Developer</Heading>
             <Text {...textProps}>
               I tend to make use of emerging technologies to build application
               that looks great, feels fantastic, and functions correctly.
@@ -39,7 +36,8 @@ export default function Profile() {
         <Image
           src="https://eduardo-rdguez.s3.amazonaws.com/profile-picture.webp"
           alt="profile-picture"
-          {...imageProps}
+          rounded="full"
+          className="profile-picture"
         />
       </GridItem>
     </SimpleGrid>
@@ -51,6 +49,11 @@ const textProps: TextProps = {
   textAlign: 'inherit',
 };
 
+const nameTextProps: TextProps = {
+  as: 'h2',
+  size: { base: 'xl', md: '4xl' },
+};
+
 const profileGridProps: SimpleGridProps = {
   columns: 2,
   h: { base: '60vh', md: '70vh' },
@@ -58,7 +61,7 @@ const profileGridProps: SimpleGridProps = {
   spacing: { base: 6, md: 0 },
 };
 
-const titleHeadingProps: TextProps = {
+const positionTextProps: TextProps = {
   as: 'h2',
   size: { base: 'lg', md: '2xl' },
   color: '#ffffffa3',
@@ -68,9 +71,4 @@ const gridImageProps: GridItemProps = {
   display: 'flex',
   justifyContent: { base: 'center', md: 'flex-end' },
   colSpan: { base: 2, md: 1 },
-};
-
-const imageProps: ImageProps = {
-  rounded: 'full',
-  w: { base: '15rem', md: '20rem', lg: '20em' },
 };

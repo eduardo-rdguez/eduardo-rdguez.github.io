@@ -15,7 +15,7 @@ import MailLineIcon from 'remixicon-react/MailLineIcon';
 export default function SocialNetworks() {
   return (
     <Box>
-      <HStack spacing={6} {...stackProps}>
+      <HStack {...stackProps}>
         <Link href="https://github.com/eduardo-rdguez" target="_blank">
           <IconButton
             aria-label="github"
@@ -62,7 +62,8 @@ const iconButtonProps: Omit<IconButtonProps, 'aria-label'> = {
 };
 
 const stackProps: StackProps = {
-  mt: { base: 2, md: 0 },
+  spacing: 6,
+  mt: { base: 4, md: 0 },
   borderWidth: '2px',
   borderColor: 'white',
   rounded: 'full',

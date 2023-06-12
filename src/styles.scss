@@ -55,3 +55,21 @@
   --tw-translate-x: -50%;
   z-index: -10;
 }
+
+@media (max-width: 400px) {
+  .profile-picture {
+    width: 18em;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .profile-picture {
+    width: 100%;
+  }
+}
+
+@media (min-width: 500px) {
+  .profile-picture {
+    width: 20em;
+  }
+}
