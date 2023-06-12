@@ -3,8 +3,8 @@ import {
   BoxProps,
   Heading,
   HeadingProps,
-  Highlight,
-  HighlightProps,
+  Link,
+  LinkProps,
   Stack,
   StackProps,
   Text,
@@ -20,21 +20,45 @@ export default function Summary() {
     <Stack {...summaryStackProps}>
       <Stack>
         <VStack spacing={{ base: 4, md: 6 }} alignItems="flex-start">
-          <Heading {...headingProps}>About me</Heading>
+          <Heading {...headingProps}>Who are you?</Heading>
           <Text {...textProps}>
-            <Highlight query="Hi, I'm Eduardo" {...highlightProps}>
-              Hi, I'm Eduardo and I'm a Software Developer with a background in
-              Back-End. I'm passionate about creating scalable and efficient
-              solutions to technological challenges. I specialize in business
-              application development and love working on complex projects that
-              require ingenious solutions.
-            </Highlight>
+            I'm Eduardo and I'm {getMyCurrentAge()} years old. I joined the{' '}
+            <Link href="https://www.makingdevs.com/" {...linkProps}>
+              MakingDevs
+            </Link>{' '}
+            team in March 2022. I'm passionate about technology and innovative
+            software solutions.
           </Text>
+          <Heading {...headingProps}>What you do?</Heading>
           <Text {...textProps}>
-            I'm confident in my ability to contribute to any software
-            development project. I'm committed to continuously expanding my
-            knowledge and skills to keep up with the latest technologies and
+            I'm a Software Developer. I currently work with{' '}
+            <Link href="https://elixir-lang.org/" {...linkProps}>
+              Elixir
+            </Link>{' '}
+            and{' '}
+            <Link href="https://www.phoenixframework.org/" {...linkProps}>
+              Phoenix Framework
+            </Link>{' '}
+            on a Real Estate Platform (REP).
+          </Text>
+          <Heading {...headingProps}>Do you know what you're good at?</Heading>
+          <Text {...textProps}>
+            I know I'm good at what I'm doing now. My results can prove it
+            anytime. I'm confident in my ability to contribute to any software
+            development project. Also, I'm committed to continuously expanding
+            my knowledge and skills to keep up with the latest technologies and
             best practices.
+          </Text>
+          <Heading {...headingProps}>
+            What aspects are you passionate about?
+          </Heading>
+          <Text {...textProps}>
+            I'm most passionate about the technologies that we are using here at{' '}
+            <Link href="https://www.makingdevs.com/" {...linkProps}>
+              MakingDevs
+            </Link>
+            . That makes me want to learn more and keep up with building
+            something greater.
           </Text>
         </VStack>
       </Stack>
@@ -42,12 +66,30 @@ export default function Summary() {
       <Box bgImage={mesh} {...meshBoxProps} />
     </Stack>
   );
+
+  function getMyCurrentAge(): number {
+    const birthDate = new Date('1996-11-15');
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const diffMonths = today.getMonth() - birthDate.getMonth();
+
+    if (
+      diffMonths < 0 ||
+      (diffMonths === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+
+    return age;
+  }
 }
 
 const summaryStackProps: StackProps = {
   justifyContent: 'center',
   spacing: { base: 6, md: 8 },
   mt: { base: 0, md: 4 },
+  mb: 8,
 };
 
 const headingProps: HeadingProps = {
@@ -64,15 +106,8 @@ const textProps: TextProps = {
   fontWeight: 500,
 };
 
-const highlightProps: Omit<HighlightProps, 'children' | 'query'> = {
-  styles: {
-    px: 2,
-    py: 1,
-    rounded: 'full',
-    bgColor: 'white',
-    color: 'black',
-    fontWeight: 'bold',
-  },
+const linkProps: LinkProps = {
+  fontWeight: 700,
 };
 
 const meshBoxProps: BoxProps = {
