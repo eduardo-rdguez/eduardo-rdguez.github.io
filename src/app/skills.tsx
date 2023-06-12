@@ -6,6 +6,7 @@ import {
   Image,
   ImageProps,
   SimpleGrid,
+  SimpleGridProps,
   Stack,
   StackProps,
   VStack,
@@ -17,7 +18,7 @@ export default function Skills() {
       <HStack justifyContent="center">
         <Heading {...headingProps}>Skills</Heading>
       </HStack>
-      <SimpleGrid columns={3} justifyItems="center">
+      <SimpleGrid {...skillsGridProps}>
         <GridItem>
           <VStack {...badgesStackProps}>
             <Image
@@ -41,19 +42,14 @@ export default function Skills() {
               alt="java-badge"
             />
             <Image
-              src="https://img.shields.io/badge/Javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E"
+              src="https://img.shields.io/badge/JavaScript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E"
               {...imageBadgesProps}
               alt="javascript-badge"
             />
             <Image
               src="https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square"
               {...imageBadgesProps}
-              alt="typeScript-badge"
-            />
-            <Image
-              src="https://img.shields.io/badge/SQL-005C84.svg?style=flat-square&logo=sql&logoColor=white"
-              {...imageBadgesProps}
-              alt="sql-badge"
+              alt="typescript-badge"
             />
           </VStack>
         </GridItem>
@@ -77,7 +73,12 @@ export default function Skills() {
             <Image
               src="https://img.shields.io/badge/Vue.js-%2335495e.svg?style=flat-square&logo=vuedotjs&logoColor=%234FC08D"
               {...imageBadgesProps}
-              alt="vue-badge"
+              alt="vuejs-badge"
+            />
+            <Image
+              src="https://img.shields.io/badge/Spock-1662AE?style=flat-square&logo=spock&logoColor=white"
+              {...imageBadgesProps}
+              alt="spock-badge"
             />
           </VStack>
         </GridItem>
@@ -108,12 +109,42 @@ export default function Skills() {
               {...imageBadgesProps}
               alt="aws-badge"
             />
+            <Image
+              src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white"
+              {...imageBadgesProps}
+              alt="stripe-badge"
+            />
+          </VStack>
+        </GridItem>
+        <GridItem>
+          <VStack {...badgesStackProps}>
+            <Image
+              src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"
+              {...imageBadgesProps}
+              alt="postgresql-badge"
+            />
+            <Image
+              src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"
+              {...imageBadgesProps}
+              alt="oracle-badge"
+            />
+            <Image
+              src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"
+              {...imageBadgesProps}
+              alt="mysql-badge"
+            />
           </VStack>
         </GridItem>
       </SimpleGrid>
     </Stack>
   );
 }
+
+const skillsGridProps: SimpleGridProps = {
+  justifyItems: 'center',
+  columns: { base: 2, md: 4 },
+  spacing: { base: 5, md: 0 },
+};
 
 const imageBadgesProps: ImageProps = {
   rounded: 'md',
