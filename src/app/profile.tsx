@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 
 import SocialNetworks from './social-networks';
+import { secondaryTextColor } from './constants';
 
 export default function Profile() {
   return (
@@ -19,7 +20,7 @@ export default function Profile() {
       <GridItem colSpan={{ base: 2, md: 1 }}>
         <Stack>
           <VStack spacing={{ base: 1, md: 6 }} alignItems="flex-start">
-            <Text {...textProps} color="#ffffffa3">
+            <Text {...textProps} color={secondaryTextColor}>
               Hi, my name's
             </Text>
             <Heading {...nameTextProps}>Eduardo.</Heading>
@@ -64,7 +65,7 @@ const profileGridProps: SimpleGridProps = {
 const positionTextProps: TextProps = {
   as: 'h2',
   size: { base: 'lg', md: '2xl' },
-  color: '#ffffffa3',
+  color: secondaryTextColor,
 };
 
 const gridImageProps: GridItemProps = {

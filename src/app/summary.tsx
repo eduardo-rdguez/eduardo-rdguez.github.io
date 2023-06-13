@@ -14,6 +14,7 @@ import {
 import Skills from './skills';
 
 import mesh from '../assets/mesh.svg';
+import { secondaryTextColor } from './constants';
 
 export default function Summary() {
   return (
@@ -95,7 +96,7 @@ const summaryStackProps: StackProps = {
 const headingProps: HeadingProps = {
   as: 'h2',
   size: { base: 'md', md: 'lg' },
-  color: '#ffffffa3',
+  color: secondaryTextColor,
   rounded: 'xl',
   py: 1,
 };

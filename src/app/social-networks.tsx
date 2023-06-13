@@ -55,9 +55,9 @@ export default function SocialNetworks() {
 const iconButtonProps: Omit<IconButtonProps, 'aria-label'> = {
   rounded: 'full',
   bg: 'transparent',
+  color: 'white',
   _hover: {
     borderWidth: '2px',
-    color: 'white',
   },
 };
 

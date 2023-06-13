@@ -11,6 +11,7 @@ import {
   StackProps,
   VStack,
 } from '@chakra-ui/react';
+import { secondaryTextColor } from './constants';
 
 export default function Skills() {
   return (
@@ -154,7 +155,7 @@ const imageBadgesProps: ImageProps = {
 const headingProps: HeadingProps = {
   as: 'h2',
   size: { base: 'md', md: 'lg' },
-  color: '#ffffffa3',
+  color: secondaryTextColor,
   rounded: 'xl',
   py: 1,
 };
