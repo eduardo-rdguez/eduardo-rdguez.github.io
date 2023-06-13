@@ -108,6 +108,7 @@ const textProps: TextProps = {
 
 const linkProps: LinkProps = {
   fontWeight: 700,
+  target: '_blank',
 };
 
 const meshBoxProps: BoxProps = {
