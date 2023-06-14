@@ -3,8 +3,8 @@ import { bodyBackgroundColor, primaryTextColor } from './constants';
 
 export const theme = extendTheme({
   fonts: {
-    body: `Matter, sans-serif`,
-    heading: `CalSans, sans-serif`,
+    body: `SourceCodeLight, sans-serif`,
+    heading: `SourceCodeBold, sans-serif`,
   },
   styles: {
     global: () => ({
