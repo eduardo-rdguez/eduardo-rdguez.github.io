@@ -12,10 +12,16 @@ import InstagramLineIcon from 'remixicon-react/InstagramLineIcon';
 import LinkedinLineIcon from 'remixicon-react/LinkedinLineIcon';
 import MailLineIcon from 'remixicon-react/MailLineIcon';
 
-export default function SocialNetworks() {
+interface SocialNetworksProps {
+  stackProps?: StackProps;
+}
+
+export default function SocialNetworks(props: SocialNetworksProps) {
+  const { stackProps } = props;
+
   return (
     <Box>
-      <HStack {...stackProps}>
+      <HStack {...customStackProps} {...stackProps}>
         <Link href="https://github.com/eduardo-rdguez" target="_blank">
           <IconButton
             aria-label="github"
@@ -61,7 +67,7 @@ const iconButtonProps: Omit<IconButtonProps, 'aria-label'> = {
   },
 };
 
-const stackProps: StackProps = {
+const customStackProps: StackProps = {
   spacing: 6,
   mt: { base: 4, md: 0 },
   borderWidth: '2px',

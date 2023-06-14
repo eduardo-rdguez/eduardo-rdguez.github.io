@@ -88,16 +88,14 @@ export default function Summary() {
 
 const summaryStackProps: StackProps = {
   justifyContent: 'center',
-  spacing: { base: 6, md: 8 },
+  spacing: { base: 6, md: 12 },
   mt: { base: 0, md: 4 },
-  mb: 8,
 };
 
 const headingProps: HeadingProps = {
   as: 'h2',
-  size: { base: 'md', md: 'lg' },
+  size: { base: 'md', md: 'md' },
   color: secondaryTextColor,
-  rounded: 'xl',
   py: 1,
 };
 

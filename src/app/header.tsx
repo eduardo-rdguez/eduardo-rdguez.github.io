@@ -16,6 +16,7 @@ import {
   MenuListProps,
   MenuButtonProps,
   MenuItemProps,
+  HeadingProps,
 } from '@chakra-ui/react';
 import '../styles.scss';
 
@@ -30,9 +31,7 @@ export default function Header() {
         <Link to="/">
           <Box {...logoBoxProps}>
             <Icon as={TerminalBoxLineIcon} boxSize="20px" mr={2} />
-            <Heading as="h1" size="sm">
-              eduardo-rdguez
-            </Heading>
+            <Heading {...headingProps}>eduardo-rdguez</Heading>
           </Box>
         </Link>
         <Box className="terminal-cursor"></Box>
@@ -74,7 +73,7 @@ const logoBoxProps: BoxProps = {
 
 const flexHeaderProps: FlexProps = {
   minH: '80px',
-  py: { base: 6, md: 10 },
+  py: { base: 4, md: 10 },
   borderStyle: 'solid',
   alignItems: 'center',
 };
@@ -83,6 +82,11 @@ const flexLogoProps = {
   flex: { base: 1 },
   justifyContent: 'start',
   alignItems: 'center',
+};
+
+const headingProps: HeadingProps = {
+  as: 'h1',
+  size: { base: 'xs', md: 'sm' },
 };
 
 const menuStackProps: StackProps = {
@@ -103,6 +107,7 @@ const menuBoxProps: BoxProps = {
 };
 
 const menuButtonProps: MenuButtonProps = {
+  color: 'white',
   bgColor: 'transparent',
   pr: 0,
   _active: {

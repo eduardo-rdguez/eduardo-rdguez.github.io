@@ -52,7 +52,7 @@ const textProps: TextProps = {
 
 const nameTextProps: TextProps = {
   as: 'h2',
-  size: { base: 'xl', md: '4xl' },
+  size: { base: 'xl', md: '2xl' },
 };
 
 const profileGridProps: SimpleGridProps = {
@@ -64,7 +64,7 @@ const profileGridProps: SimpleGridProps = {
 
 const positionTextProps: TextProps = {
   as: 'h2',
-  size: { base: 'lg', md: '2xl' },
+  size: { base: 'md', md: 'xl' },
   color: secondaryTextColor,
 };
 
