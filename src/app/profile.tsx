@@ -6,6 +6,7 @@ import {
   SimpleGrid,
   SimpleGridProps,
   Stack,
+  StackProps,
   Text,
   TextProps,
   VStack,
@@ -19,15 +20,15 @@ export default function Profile() {
     <SimpleGrid {...profileGridProps}>
       <GridItem colSpan={{ base: 2, md: 1 }}>
         <Stack>
-          <VStack spacing={{ base: 1, md: 6 }} alignItems="flex-start">
+          <VStack {...extractStackProps}>
             <Text {...textProps} color={secondaryTextColor}>
               Hi, my name's
             </Text>
             <Heading {...nameTextProps}>Eduardo.</Heading>
             <Heading {...positionTextProps}>I'm a Software Developer</Heading>
             <Text {...textProps}>
-              I tend to make use of emerging technologies to build application
-              that looks great, feels fantastic, and functions correctly.
+              I tend to make use of emerging technologies to build applications
+              that look great, feel fantastic, and function correctly.
             </Text>
             <SocialNetworks />
           </VStack>
@@ -45,14 +46,19 @@ export default function Profile() {
   );
 }
 
+const extractStackProps: StackProps = {
+  spacing: { base: 2, md: 6 },
+  alignItems: 'flex-start',
+};
+
 const textProps: TextProps = {
   fontWeight: 600,
-  textAlign: 'inherit',
+  textAlign: 'justify',
 };
 
 const nameTextProps: TextProps = {
   as: 'h2',
-  size: { base: 'xl', md: '2xl' },
+  size: { base: 'lg', md: '2xl' },
 };
 
 const profileGridProps: SimpleGridProps = {
