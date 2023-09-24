@@ -18,26 +18,24 @@ export default function Summary() {
       <VStack {...questionStackProps}>
         <Heading {...headingProps}>Who are you?</Heading>
         <Text {...textProps}>
-          I'm Eduardo and I'm {getMyCurrentAge()} years old. I joined the{' '}
-          <Link href="https://www.makingdevs.com/" {...linkProps}>
-            MakingDevs
-          </Link>{' '}
-          team in March 2022. I'm passionate about technology and innovative
-          software solutions.
+          I'm Eduardo a Software Developer with 4+ years of experience, I've
+          contributed to numerous successful software projects by delivering
+          efficient, reliable code and high-performance.
         </Text>
       </VStack>
       <VStack {...questionStackProps}>
         <Heading {...headingProps}>What do you do?</Heading>
         <Text {...textProps}>
-          I'm a Software Developer. I currently work with{' '}
+          I'm presently leveraging{' '}
           <Link href="https://elixir-lang.org/" {...linkProps}>
             Elixir
           </Link>{' '}
-          and{' '}
+          and the powerful{' '}
           <Link href="https://www.phoenixframework.org/" {...linkProps}>
             Phoenix Framework
           </Link>{' '}
-          on a Real Estate Platform (REP).
+          to enhance and maintain a Real Estate Platform with a presence in the
+          US.
         </Text>
       </VStack>
       <VStack {...questionStackProps}>
@@ -55,33 +53,13 @@ export default function Summary() {
           What aspects are you passionate about?
         </Heading>
         <Text {...textProps}>
-          I'm most passionate about the technologies that we are using here at{' '}
-          <Link href="https://www.makingdevs.com/" {...linkProps}>
-            MakingDevs
-          </Link>
-          . That makes me want to learn more and keep up with building something
+          I'm most passionate about the technologies I've been using recently.
+          That makes me want to learn more and keep up with building something
           greater.
         </Text>
       </VStack>
     </Stack>
   );
-
-  function getMyCurrentAge(): number {
-    const birthDate = new Date('1996-11-15');
-    const today = new Date();
-
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const diffMonths = today.getMonth() - birthDate.getMonth();
-
-    if (
-      diffMonths < 0 ||
-      (diffMonths === 0 && today.getDate() < birthDate.getDate())
-    ) {
-      age--;
-    }
-
-    return age;
-  }
 }
 
 const summaryStackProps: StackProps = {

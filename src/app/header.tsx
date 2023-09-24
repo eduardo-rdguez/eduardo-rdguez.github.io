@@ -72,7 +72,7 @@ const logoBoxProps: BoxProps = {
 };
 
 const flexHeaderProps: FlexProps = {
-  pt: '40px',
+  pt: { base: '2em', md: '3em' },
   alignItems: 'center',
 };
 
