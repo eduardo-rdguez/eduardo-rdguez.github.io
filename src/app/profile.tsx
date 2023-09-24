@@ -21,14 +21,11 @@ export default function Profile() {
       <GridItem colSpan={{ base: 2, md: 1 }}>
         <Stack>
           <VStack {...extractStackProps}>
-            <Text {...textProps} color={secondaryTextColor}>
-              Hi, my name's
-            </Text>
-            <Heading {...nameTextProps}>Eduardo.</Heading>
-            <Heading {...positionTextProps}>I'm a Software Developer</Heading>
+            <Heading {...nameHeadingProps}>Hello! I'm Eduardo</Heading>
+            <Heading {...roleHeadingProps}>Software Developer</Heading>
             <Text {...textProps}>
-              I tend to make use of emerging technologies to build applications
-              that look great, feel fantastic, and function correctly.
+              I actively embrace emerging technologies to build applications
+              that look great, feel fantastic and perform flawlessly.
             </Text>
             <SocialNetworks />
           </VStack>
@@ -52,30 +49,32 @@ const extractStackProps: StackProps = {
 };
 
 const textProps: TextProps = {
-  fontWeight: 600,
+  fontWeight: 500,
   textAlign: 'justify',
+  fontSize: { base: 'md', md: 'lg' },
 };
 
-const nameTextProps: TextProps = {
+const nameHeadingProps: TextProps = {
   as: 'h2',
-  size: { base: 'lg', md: '2xl' },
+  size: { base: 'xl', md: 'lg' },
 };
 
 const profileGridProps: SimpleGridProps = {
   columns: 2,
-  h: { base: '60vh', md: '70vh' },
+  h: 'full',
+  w: 'full',
   alignItems: 'center',
-  spacing: { base: 6, md: 0 },
 };
 
-const positionTextProps: TextProps = {
+const roleHeadingProps: TextProps = {
   as: 'h2',
-  size: { base: 'md', md: 'xl' },
+  size: { base: '2xl', md: '2xl' },
   color: secondaryTextColor,
 };
 
 const gridImageProps: GridItemProps = {
   display: 'flex',
+  alignSelf: { base: 'flex-start', md: 'center' },
   justifyContent: { base: 'center', md: 'flex-end' },
   colSpan: { base: 2, md: 1 },
 };

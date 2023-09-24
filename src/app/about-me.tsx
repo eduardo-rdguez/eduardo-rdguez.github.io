@@ -10,7 +10,7 @@ export default function AboutMe() {
   return (
     <Container maxW={{ base: '2xl', lg: '4xl' }}>
       <Header />
-      <VStack spacing={12}>
+      <VStack spacing={16} mt="40px">
         <Summary />
         <Skills />
         <VStack {...socialNetworksProps}>

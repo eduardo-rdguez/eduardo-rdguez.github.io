@@ -1,14 +1,16 @@
-import { Container } from '@chakra-ui/react';
-import Header from './header';
+import { Container, Stack, VStack } from '@chakra-ui/react';
 import Profile from './profile';
-import Footer from './footer';
+import Header from './header';
 
 export default function Home() {
   return (
     <Container maxW={{ base: '4xl', lg: '6xl' }}>
-      <Header />
-      <Profile />
-      <Footer />
+      <Stack h="full">
+        <Header />
+        <VStack h="full">
+          <Profile />
+        </VStack>
+      </Stack>
     </Container>
   );
 }

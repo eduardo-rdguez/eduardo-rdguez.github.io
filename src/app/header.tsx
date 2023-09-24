@@ -72,9 +72,7 @@ const logoBoxProps: BoxProps = {
 };
 
 const flexHeaderProps: FlexProps = {
-  minH: '80px',
-  py: { base: 4, md: 10 },
-  borderStyle: 'solid',
+  pt: '40px',
   alignItems: 'center',
 };
 
@@ -99,7 +97,7 @@ const menuStackProps: StackProps = {
 const menuBoxProps: BoxProps = {
   w: 'full',
   fontSize: '1rem',
-  fontWeight: 700,
+  fontWeight: 500,
   whiteSpace: 'nowrap',
   _hover: {
     textDecoration: 'none',

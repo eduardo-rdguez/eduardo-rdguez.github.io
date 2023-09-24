@@ -3,15 +3,15 @@ import { bodyBackgroundColor, primaryTextColor } from './constants';
 
 export const theme = extendTheme({
   fonts: {
-    body: `SourceCodeLight, sans-serif`,
-    heading: `SourceCodeBold, sans-serif`,
+    body: `Matter, sans-serif`,
+    heading: `CalSans, sans-serif`,
   },
   styles: {
     global: () => ({
       body: {
         bg: bodyBackgroundColor,
         color: primaryTextColor,
-        fontSize: { base: '14px', md: '16px' },
+        fontSize: { base: '12px', md: '16px' },
       },
     }),
   },

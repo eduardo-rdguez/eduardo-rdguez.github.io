@@ -70,8 +70,4 @@ const iconButtonProps: Omit<IconButtonProps, 'aria-label'> = {
 const customStackProps: StackProps = {
   spacing: 6,
   mt: { base: 4, md: 0 },
-  borderWidth: '2px',
-  borderColor: 'white',
-  rounded: 'full',
-  px: 4,
 };
