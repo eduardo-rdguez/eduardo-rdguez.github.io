@@ -7,17 +7,18 @@ import {
   Stack,
   StackProps,
   Text,
+  TextProps,
 } from '@chakra-ui/react';
 import { secondaryTextColor } from './constants';
 
 export default function TechStack() {
   return (
     <Stack spacing={8}>
-      <HStack justifyContent="center">
-        <Heading {...headingProps}>Tech Stack</Heading>
-      </HStack>
       <Stack>
-        <Text>
+        <HStack justifyContent="center">
+          <Heading {...headingProps}>Tech Stack</Heading>
+        </HStack>
+        <Text {...textProps}>
           My technology stack is made up of these languages and tools, but I
           don't limit myself to learning or applying any other.
         </Text>
@@ -159,6 +160,7 @@ const headingProps: HeadingProps = {
   as: 'h2',
   size: { base: 'md', md: 'md' },
   color: secondaryTextColor,
+  py: 1,
 };
 
 const badgesHStackProps: StackProps = {
@@ -168,4 +170,10 @@ const badgesHStackProps: StackProps = {
 
 const imageBadgesProps: ImageProps = {
   height: 6,
+};
+
+const textProps: TextProps = {
+  fontWeight: 500,
+  textAlign: 'justify',
+  fontSize: { base: 'md', md: 'lg' },
 };
