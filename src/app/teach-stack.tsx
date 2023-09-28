@@ -173,7 +173,7 @@ const imageBadgesProps: ImageProps = {
 };
 
 const textProps: TextProps = {
-  fontWeight: 500,
+  fontSize: '16px',
   textAlign: 'justify',
-  fontSize: { base: 'md', md: 'lg' },
+  fontWeight: 500,
 };
