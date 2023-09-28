@@ -18,9 +18,11 @@ export default function Summary() {
       <VStack {...questionStackProps}>
         <Heading {...headingProps}>Who are you?</Heading>
         <Text {...textProps}>
-          I'm Eduardo a Software Developer with 4+ years of experience, I've
-          contributed to numerous successful software projects by delivering
-          efficient, reliable code and high-performance.
+          Hi, My name's Eduardo and I am a Software Developer with 4+ years of
+          experience, I've had the opportunity to work on a wide range of
+          software projects by delivering efficient, reliable and
+          high-performance code. I've always enjoyed the challenge of finding
+          creative solutions to complex problems.
         </Text>
       </VStack>
       <VStack {...questionStackProps}>
@@ -35,17 +37,16 @@ export default function Summary() {
             Phoenix Framework
           </Link>{' '}
           to enhance and maintain a Real Estate Platform with a presence in the
-          US.
+          U.S.
         </Text>
       </VStack>
       <VStack {...questionStackProps}>
         <Heading {...headingProps}>Do you know what you're good at?</Heading>
         <Text {...textProps}>
-          I know I'm good at what I'm doing now. My results can prove it
-          anytime. I'm confident in my ability to contribute to any software
-          development project. Also, I'm committed to continuously expanding my
-          knowledge and skills to keep up with the latest technologies and best
-          practices.
+          I'm confident in my ability to contribute to any software development
+          project, my results can prove it anytime. Also, I'm committed to
+          continuously expanding my knowledge and skills to keep up with the
+          latest technologies and best practices.
         </Text>
       </VStack>
       <VStack {...questionStackProps}>
@@ -53,9 +54,13 @@ export default function Summary() {
           What aspects are you passionate about?
         </Heading>
         <Text {...textProps}>
-          I'm most passionate about the technologies I've been using recently.
-          That makes me want to learn more and keep up with building something
-          greater.
+          I'm passionate about several aspects of my work. I'm truly
+          enthusiastic about collaborating with awesome developers to tackle
+          challenging projects and generate creative solutions. This
+          collaborative atmosphere is incredibly inspiring to me. Additionally,
+          I've a strong passion for software which has also been a source of
+          motivation and fulfillment. That makes me want to learn more and keep
+          up with building something greater.
         </Text>
       </VStack>
     </Stack>

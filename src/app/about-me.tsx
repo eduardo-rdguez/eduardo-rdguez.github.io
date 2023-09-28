@@ -2,7 +2,7 @@ import { Box, BoxProps, Container, StackProps, VStack } from '@chakra-ui/react';
 import Summary from './summary';
 import Header from './header';
 import SocialNetworks from './social-networks';
-import Skills from './skills';
+import TechStack from './teach-stack';
 
 import mesh from '../assets/mesh.svg';
 
@@ -12,7 +12,7 @@ export default function AboutMe() {
       <Header />
       <VStack spacing={16} mt="40px">
         <Summary />
-        <Skills />
+        <TechStack />
         <VStack {...socialNetworksProps}>
           <SocialNetworks stackProps={socialNetworksStackProps} />
         </VStack>

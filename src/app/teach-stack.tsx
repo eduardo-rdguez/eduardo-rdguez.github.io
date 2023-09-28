@@ -6,15 +6,22 @@ import {
   ImageProps,
   Stack,
   StackProps,
+  Text,
 } from '@chakra-ui/react';
 import { secondaryTextColor } from './constants';
 
-export default function Skills() {
+export default function TechStack() {
   return (
     <Stack spacing={8}>
       <HStack justifyContent="center">
-        <Heading {...headingProps}>Skills</Heading>
+        <Heading {...headingProps}>Tech Stack</Heading>
       </HStack>
+      <Stack>
+        <Text>
+          My technology stack is made up of these languages and tools, but I
+          don't limit myself to learning or applying any other.
+        </Text>
+      </Stack>
       <Stack>
         <HStack {...badgesHStackProps}>
           <Image

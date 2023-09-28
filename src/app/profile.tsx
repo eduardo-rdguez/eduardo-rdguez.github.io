@@ -21,7 +21,12 @@ export default function Profile() {
       <GridItem colSpan={{ base: 2, md: 1 }}>
         <Stack>
           <VStack {...extractStackProps}>
-            <Heading {...nameHeadingProps}>Hello! I'm Eduardo</Heading>
+            <Heading {...nameHeadingProps}>
+              Hello! I'm Eduardo{' '}
+              <span role="img" aria-label="wave" className="wave">
+                👋
+              </span>
+            </Heading>
             <Heading {...roleHeadingProps}>Software Developer</Heading>
             <Text {...textProps}>
               I actively embrace emerging technologies to build applications
