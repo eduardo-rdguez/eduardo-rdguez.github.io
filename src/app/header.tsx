@@ -20,7 +20,7 @@ import {
 } from '@chakra-ui/react';
 import '../styles.scss';
 
-import TerminalBoxLineIcon from 'remixicon-react/TerminalBoxLineIcon';
+import AtLineIcon from 'remixicon-react/AtLineIcon';
 import MenuLineIcon from 'remixicon-react/MenuLineIcon';
 import { Link } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ export default function Header() {
       <Flex {...flexLogoProps}>
         <Link to="/">
           <Box {...logoBoxProps}>
-            <Icon as={TerminalBoxLineIcon} boxSize="20px" mr={2} />
+            <Icon as={AtLineIcon} boxSize="18px" />
             <Heading {...headingProps}>eduardo-rdguez</Heading>
           </Box>
         </Link>
@@ -66,6 +66,7 @@ export default function Header() {
 
 const logoBoxProps: BoxProps = {
   display: 'flex',
+  alignItems: 'center',
   _hover: {
     textDecoration: 'none',
   },

@@ -1,7 +1,7 @@
 import {
+  Badge,
+  BadgeProps,
   HStack,
-  Heading,
-  HeadingProps,
   Image,
   ImageProps,
   Stack,
@@ -9,14 +9,13 @@ import {
   Text,
   TextProps,
 } from '@chakra-ui/react';
-import { secondaryTextColor } from './constants';
 
 export default function TechStack() {
   return (
     <Stack spacing={8}>
       <Stack>
         <HStack justifyContent="center">
-          <Heading {...headingProps}>Tech Stack</Heading>
+          <Badge {...badgeHeadingProps}>Tech Stack</Badge>
         </HStack>
         <Text {...textProps}>
           My technology stack is made up of these languages and tools, but I
@@ -156,11 +155,10 @@ export default function TechStack() {
   );
 }
 
-const headingProps: HeadingProps = {
+const badgeHeadingProps: BadgeProps = {
   as: 'h2',
-  size: { base: 'md', md: 'md' },
-  color: secondaryTextColor,
-  py: 1,
+  textTransform: 'none',
+  fontSize: 'md',
 };
 
 const badgesHStackProps: StackProps = {

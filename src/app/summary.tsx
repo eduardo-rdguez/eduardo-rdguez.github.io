@@ -1,32 +1,31 @@
 import {
   VStack,
-  Heading,
-  HeadingProps,
   Link,
   LinkProps,
   Stack,
   StackProps,
   Text,
   TextProps,
+  Badge,
+  BadgeProps,
 } from '@chakra-ui/react';
-
-import { secondaryTextColor } from './constants';
 
 export default function Summary() {
   return (
     <Stack {...summaryStackProps}>
       <VStack {...questionStackProps}>
-        <Heading {...headingProps}>Who are you?</Heading>
+        <Badge {...badgeHeadingProps}>Who are you?</Badge>
         <Text {...textProps}>
-          Hi, My name's Eduardo and I am a Software Developer with 4+ years of
-          experience, I've had the opportunity to work on a wide range of
-          software projects by delivering efficient, reliable and
-          high-performance code. I've always enjoyed the challenge of finding
-          creative solutions to complex problems.
+          Hi, My name's <strong>Eduardo</strong> and I am a{' '}
+          <strong>Software Developer</strong> with 4+ years of experience, I've
+          had the opportunity to work on a wide range of software projects by
+          delivering efficient, reliable and high-performance code. I've always
+          enjoyed the challenge of finding creative solutions to complex
+          problems.
         </Text>
       </VStack>
       <VStack {...questionStackProps}>
-        <Heading {...headingProps}>What do you do?</Heading>
+        <Badge {...badgeHeadingProps}>What do you do?</Badge>
         <Text {...textProps}>
           I'm presently leveraging{' '}
           <Link href="https://elixir-lang.org/" {...linkProps}>
@@ -41,7 +40,7 @@ export default function Summary() {
         </Text>
       </VStack>
       <VStack {...questionStackProps}>
-        <Heading {...headingProps}>Do you know what you're good at?</Heading>
+        <Badge {...badgeHeadingProps}>Do you know what you're good at?</Badge>
         <Text {...textProps}>
           I'm confident in my ability to contribute to any software development
           project, my results can prove it anytime. Also, I'm committed to
@@ -50,9 +49,9 @@ export default function Summary() {
         </Text>
       </VStack>
       <VStack {...questionStackProps}>
-        <Heading {...headingProps}>
+        <Badge {...badgeHeadingProps}>
           What aspects are you passionate about?
-        </Heading>
+        </Badge>
         <Text {...textProps}>
           I'm passionate about several aspects of my work. I'm truly
           enthusiastic about collaborating with awesome developers to tackle
@@ -78,11 +77,10 @@ const questionStackProps: StackProps = {
   alignItems: 'flex-start',
 };
 
-const headingProps: HeadingProps = {
+const badgeHeadingProps: BadgeProps = {
   as: 'h2',
-  size: { base: 'md', md: 'md' },
-  color: secondaryTextColor,
-  py: 1,
+  textTransform: 'none',
+  fontSize: 'md',
 };
 
 const textProps: TextProps = {
