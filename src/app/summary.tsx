@@ -9,6 +9,7 @@ import {
   Badge,
   BadgeProps,
 } from '@chakra-ui/react';
+import SoftwareWizards from './software-wizards';
 
 export default function Summary() {
   return (
@@ -53,13 +54,13 @@ export default function Summary() {
           What aspects are you passionate about?
         </Badge>
         <Text {...textProps}>
-          I'm passionate about several aspects of my work. I'm truly
-          enthusiastic about collaborating with awesome developers to tackle
-          challenging projects and generate creative solutions. This
-          collaborative atmosphere is incredibly inspiring to me. Additionally,
-          I've a strong passion for software which has also been a source of
-          motivation and fulfillment. That makes me want to learn more and keep
-          up with building something greater.
+          I'm passionate about several aspects of my work. I'm always excited to
+          engage with <SoftwareWizards /> to tackle challenging projects and
+          generate creative solutions. This collaborative atmosphere is
+          incredibly inspiring to me. As well, I've a strong passion for
+          software which has also been a source of motivation and fulfillment.
+          That makes me want to learn more and keep up with building something
+          greater.
         </Text>
       </VStack>
     </Stack>
