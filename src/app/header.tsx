@@ -37,7 +37,7 @@ export default function Header() {
         <Box className="terminal-cursor"></Box>
       </Flex>
       <Stack {...menuStackProps}>
-        <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
+        <HStack {...linkStackProps}>
           <Link to="/about-me">
             <Box {...menuBoxProps}>About me</Box>
           </Link>
@@ -93,6 +93,11 @@ const menuStackProps: StackProps = {
   justify: 'flex-end',
   direction: 'row',
   spacing: 6,
+};
+
+const linkStackProps: StackProps = {
+  display: { base: 'none', md: 'flex' },
+  spacing: 8,
 };
 
 const menuBoxProps: BoxProps = {

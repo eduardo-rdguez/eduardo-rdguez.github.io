@@ -17,7 +17,7 @@ import { bodyBackgroundColor, secondaryTextColor } from './constants';
 
 export default function SoftwareWizards() {
   return (
-    <Popover placement="bottom" trigger="hover">
+    <Popover placement="top" trigger="hover">
       <PopoverTrigger>
         <Button {...triggerTextProps}>passionate developers</Button>
       </PopoverTrigger>
@@ -59,9 +59,9 @@ const triggerTextProps: ButtonProps = {
 };
 
 const popoverHeaderProps: PopoverHeaderProps = {
-  pt: 1,
   fontWeight: 'bold',
   border: 0,
+  pt: 1,
 };
 
 const popoverContentProps: PopoverContentProps = {
