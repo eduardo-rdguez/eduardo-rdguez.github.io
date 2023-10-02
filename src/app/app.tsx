@@ -1,9 +1,10 @@
-import { ChakraProvider, Grid } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/provider';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from './home';
 import AboutMe from './about-me';
 import { theme } from './theme';
 import { ReactNode } from 'react';
+import { Grid } from '@chakra-ui/react';
 
 export function App() {
   return (
