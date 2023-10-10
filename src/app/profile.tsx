@@ -41,6 +41,8 @@ export default function Profile() {
           src="https://eduardo-rdguez.s3.amazonaws.com/profile-picture.webp"
           alt="profile-picture"
           rounded="full"
+          width="20em"
+          height="20em"
           className="profile-picture"
         />
       </GridItem>
