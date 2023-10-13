@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://eduardo-rdguez.dev/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
+    <loc>https://eduardo-rdguez.dev/index.html</loc>
+    <lastmod>2023-10-12</lastmod>
   </url>
   <url>
     <loc>https://eduardo-rdguez.dev/#/about-me</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-12</lastmod>
   </url>
 </urlset>
