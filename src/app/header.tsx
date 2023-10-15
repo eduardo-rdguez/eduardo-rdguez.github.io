@@ -21,7 +21,7 @@ import {
 import '../styles.scss';
 
 import AtLineIcon from 'remixicon-react/AtLineIcon';
-import MenuLineIcon from 'remixicon-react/MenuLineIcon';
+import Menu4LineIcon from 'remixicon-react/Menu4LineIcon';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
@@ -49,7 +49,7 @@ export default function Header() {
               name="menu-button"
               aria-label="menu-button"
               as={IconButton}
-              icon={<MenuLineIcon />}
+              icon={<Menu4LineIcon />}
               {...menuButtonProps}
             ></MenuButton>
             <MenuList {...menuListProps}>

@@ -19,7 +19,7 @@ export default function SoftwareWizards() {
   return (
     <Popover placement="top" trigger="hover">
       <PopoverTrigger>
-        <Button {...triggerTextProps}>passionate developers</Button>
+        <Button {...triggerTextProps}>amazing teams</Button>
       </PopoverTrigger>
       <PopoverContent {...popoverContentProps}>
         <PopoverHeader {...popoverHeaderProps}>Software wizards</PopoverHeader>

@@ -30,7 +30,8 @@ export default function Profile() {
             <Heading {...roleHeadingProps}>Software Developer</Heading>
             <Text {...textProps}>
               I actively embrace emerging technologies to build applications
-              that look great, feel fantastic and perform flawlessly.
+              that stand out in terms of aesthetics, functionality, and
+              reliability.
             </Text>
             <SocialNetworks />
           </VStack>
