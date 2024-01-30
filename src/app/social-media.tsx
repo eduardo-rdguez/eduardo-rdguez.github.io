@@ -10,13 +10,13 @@ import {
 import GithubLineIcon from 'remixicon-react/GithubLineIcon';
 import InstagramLineIcon from 'remixicon-react/InstagramLineIcon';
 import LinkedinLineIcon from 'remixicon-react/LinkedinLineIcon';
-import MailLineIcon from 'remixicon-react/MailLineIcon';
+import AtLineIcon from 'remixicon-react/AtLineIcon';
 
 interface SocialNetworksProps {
   stackProps?: StackProps;
 }
 
-export default function SocialNetworks(props: SocialNetworksProps) {
+export default function SocialMedia(props: SocialNetworksProps) {
   const { stackProps } = props;
 
   return (
@@ -42,7 +42,7 @@ export default function SocialNetworks(props: SocialNetworksProps) {
         <Link href="mailto:eduardoperaltardgz@gmail.com" target="_blank">
           <IconButton
             aria-label="mail"
-            icon={<MailLineIcon />}
+            icon={<AtLineIcon />}
             {...iconButtonProps}
           />
         </Link>

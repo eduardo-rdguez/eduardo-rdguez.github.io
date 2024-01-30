@@ -12,7 +12,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 
-import SocialNetworks from './social-networks';
+import SocialMedia from './social-media';
 import { secondaryTextColor } from './constants';
 
 export default function Profile() {
@@ -27,13 +27,13 @@ export default function Profile() {
                 👋
               </span>
             </Heading>
-            <Heading {...roleHeadingProps}>Software Developer</Heading>
+            <Heading {...roleHeadingProps}>Software Engineer</Heading>
             <Text {...textProps}>
               I actively embrace emerging technologies to build applications
               that stand out in terms of aesthetics, functionality, and
               reliability.
             </Text>
-            <SocialNetworks />
+            <SocialMedia />
           </VStack>
         </Stack>
       </GridItem>

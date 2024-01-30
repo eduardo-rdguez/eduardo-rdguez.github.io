@@ -14,8 +14,8 @@ export default function TechStack() {
   return (
     <Stack spacing={8}>
       <Stack>
-        <HStack justifyContent="center">
-          <Badge {...badgeHeadingProps}>Tech Stack</Badge>
+        <HStack>
+          <Badge {...badgeHeadingProps}>Skills</Badge>
         </HStack>
         <Text {...textProps}>
           My technology stack is made up of these languages and tools, but I
